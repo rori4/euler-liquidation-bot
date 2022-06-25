@@ -17,6 +17,7 @@ Configuration through `.env` file:
 - `PRV_KEY` - private key of the account executing EOA liquidations. The account needs to hold ETH to execute liquidation transactions.
 
 Optionally the bot can be configured to push reports to Discord
+
 - `DISCORD_WEBHOOK` - Discord webhook URL
 - `REPORTER_INTERVAL` - reporting interval in seconds
 

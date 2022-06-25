@@ -1,5 +1,5 @@
-require('dotenv').config();
+require("dotenv").config()
 
-const { main } = require('./monLib');
+const { main } = require("./monLib")
 
-main();
+main()

@@ -1,7 +1,7 @@
 // const BotSwapAndRepay = require('./BotSwapAndRepay');
-const EOASwapAndRepay = require('./EOASwapAndRepay');
+const EOASwapAndRepay = require("./EOASwapAndRepay")
 
 module.exports = {
-  // BotSwapAndRepay,
-  EOASwapAndRepay,
-};
+	// BotSwapAndRepay,
+	EOASwapAndRepay,
+}

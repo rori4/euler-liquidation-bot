@@ -1,7 +1,7 @@
-const { deploy } = require('./botTestLib')
+const { deploy } = require("./botTestLib")
 
 module.exports = {
-  hooks: {
-    deploy,
-  },
-};
+	hooks: {
+		deploy,
+	},
+}
