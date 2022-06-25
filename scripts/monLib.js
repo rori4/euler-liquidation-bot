@@ -102,21 +102,24 @@ async function processAccounts() {
 	inFlight = true
 	let processedAccount
 	try {
+		console.log(
+			`Processing accounts... | ${
+				Object.values(subsData.accounts.accounts).length
+			}`,
+		)
 		for (let act of Object.values(subsData.accounts.accounts)) {
 			if (typeof act !== "object") continue
-
 			processedAccount = act
 			if (act.healthScore < 1000000) {
-				if (
-					deferredAccounts[act.account] &&
-					deferredAccounts[act.account].until > Date.now()
-				) {
-					// console.log(`Skipping deferred ${act.account}`);
-					continue
-				}
+				// if (
+				// 	deferredAccounts[act.account] &&
+				// 	deferredAccounts[act.account].until > Date.now()
+				// ) {
+				// 	// console.log(`Skipping deferred ${act.account}`);
+				// 	continue
+				// }
 
-				await doLiquidation(act)
-				break
+				doLiquidation(act)
 			}
 		}
 	} catch (e) {
